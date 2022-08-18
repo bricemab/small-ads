@@ -1,5 +1,5 @@
-import { Task } from './task';
-var loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque imperdiet posuere. Aenean at urna lacinia dolor auctor dignissim id vitae ipsum. Etiam non consectetur dolor. Donec euismod tincidunt justo, non accumsan dui pellentesque vel. Donec semper ultricies cursus. Donec fermentum libero condimentum, iaculis odio feugiat, vehicula nisl.";
+import { Task } from '../../types/Task';
+const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque imperdiet posuere. Aenean at urna lacinia dolor auctor dignissim id vitae ipsum. Etiam non consectetur dolor. Donec euismod tincidunt justo, non accumsan dui pellentesque vel. Donec semper ultricies cursus. Donec fermentum libero condimentum, iaculis odio feugiat, vehicula nisl.";
 
 export const TASKS: Task[] = [
     {id: 1, name: "Baby-sittings", price: "50 CHF", description: loremIpsum, time: "3h", location: "Sion", imageUrl: './assets/img/babysitting-exemple.jpg'},

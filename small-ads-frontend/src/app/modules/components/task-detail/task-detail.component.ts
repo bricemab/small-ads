@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { TaskService } from '../task.service';
-import { Task } from '../task';
+import { TaskService } from '../../../services/Task/task.service';
+import { Task } from '../../../types/Task';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

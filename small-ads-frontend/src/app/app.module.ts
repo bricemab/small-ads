@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './modules/layouts/navbar/navbar.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { HomeComponent } from './home/home.component';
-import { TaskComponent } from './task/task.component';
-import { TaskDetailComponent } from './task-detail/task-detail.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { HomeComponent } from './modules/layouts/home/home.component';
+import { TaskComponent } from './modules/components/task/task.component';
+import { TaskDetailComponent } from './modules/components/task-detail/task-detail.component';
+import { PageNotFoundComponent } from './modules/layouts/page-not-found/page-not-found.component';
 
 
 @NgModule({
