@@ -1,18 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400,600&display=swap");
 
-.title {
-    font-size: 18px;
-    font-family: 'Work Sans', sans-serif;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: -1px;
+* {
+  color: #e5e5e5;
+}
+
+.card {
+  background-color: #2e2e2e;
+}
+
+.location {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffbe0b;
 }
 
 .description {
-    font-size: 13px;
+  margin-top: 1rem;
+  font-size: 14px;
 }
 
 .price {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: right;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.information-block {
+  position: relative;
+  top: 1rem;
+}
+
+.image {
+  height: 100%;
+}
+
+.location-icon {
+  margin-right: 0.3rem;
+  color: #ffbe0b;
 }

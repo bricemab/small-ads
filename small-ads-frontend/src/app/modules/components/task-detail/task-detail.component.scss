@@ -1,13 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
 
 .nav-title {
-    font-size: 18px;
-    font-family: 'Work Sans', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: -1px;
+  font-size: 18px;
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
 }
 .img-task {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+
+.backhome-link {
+  position: absolute;
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+  color: #ffffff;
+  font-size: 25px;
 }
