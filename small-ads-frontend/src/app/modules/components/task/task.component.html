@@ -1,12 +1,20 @@
-<div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-3">
+<div class="row row-cols-1 row-cols-sm-1 g-3">
     <div class="col" *ngFor="let task of tasks">
-        <div class="card shadow-sm">
-            <div class="card-body" >
-                <h5 class="card-title title">{{task.name}}</h5>
-                <p class="card-text description">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                <h5 class="card-title price">{{task.price}}</h5>
-                <a routerLink="/detail/{{task.id}}" class="stretched-link"></a>
+        <div class="card sm-3" style="max-width: 540px;">
+            <div class="row">
+                <div class="col">
+                    <img [src]="task.imageUrl" class="img-fluid rounded-start image" alt="...">
+                </div>
+                <div class="col">
+                    <div class="information-block">
+                        <h5 class="location"><fa-icon class="location-icon" [icon]="faLocationDot"></fa-icon>{{ task.location }}</h5>
+                        <p class="description">{{ (task.description.length>6)? (task.description | slice:0:60)+'..':(task.description) }}</p>
+                    </div>
+                    <p class="price">{{ task.price }}</p>
+                    <a routerLink="/detail/{{task.id}}" class="stretched-link"></a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
