@@ -1,6 +1,6 @@
 <div class="row row-cols-1 row-cols-sm-1 g-3">
   <div class="col" *ngFor="let task of tasks">
-    <div class="card sm-3" style="max-width: 540px;">
+    <div class="card sm-3" style="max-width: 540px; ">
       <div class="row">
         <div class="col">
           <img
@@ -18,7 +18,7 @@
             <p class="description">
               {{
                 task.description.length > 6
-                  ? (task.description | slice: 0:60) + ".."
+                  ? (task.description | slice: 0:40) + ".."
                   : task.description
               }}
             </p>

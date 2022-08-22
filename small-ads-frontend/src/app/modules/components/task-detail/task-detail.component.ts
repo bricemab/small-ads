@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { TaskService } from '../../../services/Task/task.service';
 import { Task } from '../../../types/Task';
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faPaperPlane, faLocationDot} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-task-detail',
@@ -13,6 +13,8 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 export class TaskDetailComponent implements OnInit {
   task?: Task;
   faAngleLeft = faAngleLeft;
+  faPaperPlane = faPaperPlane;
+  faLocationDot = faLocationDot;
   constructor(
     private route: ActivatedRoute,
     private taskService: TaskService,

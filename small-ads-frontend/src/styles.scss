@@ -1,7 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 @import "variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-* {
-  font-family: "Roboto", sans-serif;
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../src/assets/fonts/OpenSans-Regular.ttf');
 }
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url('../src/assets/fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url('../src/assets/fonts/OpenSans-Light.ttf');
+}
+
+* {
+  font-family: "Open Sans";
+}
+
