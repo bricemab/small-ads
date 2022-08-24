@@ -1,118 +1,56 @@
-@import '../../../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../../../styles/styles.scss';
+$font-primary: "Open Sans";
+$font-primary-bold: "Open Sans Bold";
 
-
-$font-primary: "Open Sans Bold";
-$black: #e5e5e5;
-
-body {
+* {
     font-family: $font-primary;
-    font-size: 16px;
-    line-height: 1.8;
-    font-weight: normal;
-    background: #f8f9fd;
+    color: $white;
 }
 
-a {
-    transition: .3s all ease;
-
-    &:hover,
-    &:focus {
-        text-decoration: none !important;
-        outline: none !important;
-        box-shadow: none;
-    }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5 {
-    line-height: 1.5;
-    font-weight: 400;
-    font-family: $font-primary;
-    color: $black;
-}
-
-
-.ftco-section {
+.login-section {
     padding: 7em 0;
 }
-
-.ftco-no-pt {
-    padding-top: 0;
-}
-
-.ftco-no-pb {
-    padding-bottom: 0;
-}
-
-//HEADING SECTION
-.heading-section {
-    font-size: 28px;
-}
-
 
 .wrap {
     width: 100%;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px 0px, rgba(0, 0, 0, 0.22) 0px 10px 10px 0px;
+
+    @include media-breakpoint-up(md) {
+        position: relative;
+        left: 25%;
+        width: 50%;
+    }
 }
 
-.text-wrap,
 .login-wrap {
-    width: 50%;
+    width: 100%;
 
     @include media-breakpoint-down(md) {
         width: 100%;
     }
 }
 
-.text-wrap {
-
-    color: $white  !important;
-
-    .text {
-        h2 {
-            font-weight: 900;
-            color: $white  !important;
-        }
-    }
-}
-
-.login-wrap {
-    position: relative;
+h2 {
+    font-family: $font-primary-bold;
     color: $white;
-
-    h3 {
-        font-weight: 300;
-    }
 }
-
 
 .form-group {
     position: relative;
 
     .label {
+        font-family: $font-primary-bold;
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 1px;
         color: #e5e5e5;
-        font-weight: 700;
+        padding-bottom: 1rem;
     }
 
-    a {
-        color: lighten($black, 50%);
-    }
 }
 
-//FORM CONTROL
-.form-control {
+.input {
     height: 48px;
     background: rgba(14, 14, 14, 0.05);
     font-size: 16px;
@@ -121,27 +59,8 @@ h5,
     border: 1px solid transparent;
     padding-left: 20px;
     padding-right: 20px;
+    color: $white;
 
-
-    &::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        color: rgba(0, 0, 0, .2) !important;
-    }
-
-    &::-moz-placeholder {
-        /* Firefox 19+ */
-        color: rgba(0, 0, 0, .2) !important;
-    }
-
-    &:-ms-input-placeholder {
-        /* IE 10+ */
-        color: rgba(0, 0, 0, .2) !important;
-    }
-
-    &:-moz-placeholder {
-        /* Firefox 18- */
-        color: rgba(0, 0, 0, .2) !important;
-    }
 
     &:focus,
     &:active {
@@ -149,70 +68,53 @@ h5,
         box-shadow: none;
         background: rgba(0, 0, 0, .07);
         border-color: transparent;
+        color: $white;
     }
 }
 
-
-
-//BUTTON
-.btn {
-    cursor: pointer;
-    box-shadow: none !important;
-    font-size: 15px;
-    padding: 10px 20px;
+.submit {
+    height: 48px;
+    font-size: 16px;
     border-radius: 50px;
-  
-    &:hover,
-    &:active,
-    &:focus {
-        outline: none;
-    }
+    box-shadow: none;
+    border: 1px solid transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: $white;
 
-    &.btn-primary {
-        background: $primary;
-        border: 1px solid $primary;
+    &:hover {
         color: $white;
-
-        &:hover {
-            border: 1px solid $primary;
-            background: $primary;
-            color: $white;
-        }
-
-        &.btn-outline-primary {
-            border: 1px solid $primary;
-            background: transparent;
-            color: $primary;
-
-            &:hover {
-                border: 1px solid transparent;
-                background: $primary;
-                color: $white;
-            }
-        }
     }
+}
 
-    &.btn-white {
-        background: $white;
-        border: 1px solid $white;
+.text-signup {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
         color: $white;
-
-        &:hover {
-            border: 1px solid $white;
-            background: transparent;
-            color: $white;
-        }
-
-        &.btn-outline-white {
-            border: 1px solid $white;
-            background: transparent;
-            color: $white;
-
-            &:hover {
-                border: 1px solid transparent;
-                background: $white;
-                color: $black;
-            }
-        }
     }
+}
+
+.section-signup {
+    font-size: 14px;
+}
+
+.arrow-icon{
+    margin-left: 0.5rem;
+}
+
+.arrow-icon{
+    margin-left: 0.5rem;
+}
+
+.block-signup .arrow-icon {
+    position: relative;
+    left: 0;
+    transition: ease-in-out 0.2s;
+}
+
+.block-signup:hover .arrow-icon {
+    left: 1rem;
+    color: $white;
 }
