@@ -1,13 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
-
-.nav-title {
-    font-size: 18px;
-    font-family: 'Work Sans', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: -1px;
+* {
+  font-size: 14px;
 }
+
+p {
+  color: #e5e5e5;
+}
+
 .img-task {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+
+.backhome-link {
+  position: absolute;
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+  color: #ffffff !important;
+}
+
+.task-price {
+  margin-top: 5%;
+}
+
+.row-clientInfo {
+  border-top: #383838 solid 0.1pt;
+  border-bottom: #383838 solid 0.1pt;
+}
+
+.task-clientInfo {
+  margin-top: 0.5rem;
+  margin-bottom: -1.9rem;
+  
+}
+
+.task-location {
+  position: absolute;
+  right: 5%;
+  margin-top: 1rem;
+  margin-bottom: -1.9rem;
+}
+
+.location {
+  font-family: "Open Sans Bold";
+  font-size: 14px;
+  text-transform: uppercase;
+
+}
+
+.location-icon {
+  margin-right: 0.3rem;
+}
+
+.client-name {
+  margin-bottom: 0rem;
+  font-family: 'Open Sans Bold';
+  font-size: 13px;
+}
+
+.client-date {
+  font-size: 13px;
+  color: #b7b7b7;
+}
+
+.task-information {
+  margin-top: 5%;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.task-type {
+  text-transform: uppercase;
+  font-family: 'Open Sans Bold';
+  font-size: 16px;
+}
+
+.task-workToDo {
+  font-family: 'Open Sans Bold';
+  font-size: 16px;
+}
+
+
+.time {
+  margin-bottom: 2.5rem;
+}
+
+.text-time {
+  font-size: 12px;  
+}
+
+.data-time {
+  font-family: 'Open Sans Bold';
+  font-size: 12px;  
+}
+
+.price {
+  font-size: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.task-description {
+  margin-top: -0.5rem;
+}
+
+.card-description {
+  background-color: #2e2e2e;
+  border-radius: 1px;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+.chat-btn {
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.msg-icon {
+  margin-right: 5px;
 }

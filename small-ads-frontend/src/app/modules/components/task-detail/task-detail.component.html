@@ -1,45 +1,61 @@
-<div *ngIf="task">
-    <nav class="navbar bg-light">
-        <div class="container-fluid ">
-            <div class="nav-icon d-flex flex-row" role="search">
-                <a class="navbar-brand" routerLink="/home">
-                    <fa-icon [icon]="faArrowLeft"></fa-icon>
-                </a>
-            </div>
-            <a class="navbar-brand mx-auto nav-title" href="#">{{task.name}}</a>
+<div class="bg-dark">
+  <div *ngIf="task">
+    <div>
+      <a class="backhome-link" routerLink="/home">
+        <fa-icon [icon]="faAngleLeft" style="font-size: 25px;"></fa-icon>
+      </a>
+      <img [src]="task.imageUrl" class="img-fluid img-task" />
+    </div>
+
+    <div class="container">
+      <div class="row row-clientInfo">
+        <div class="col">
+          <div class="task-clientInfo px-3">
+            <p class="client-name">Théo Mayoraz</p>
+            <p class="client-date">Client depuis 1 an</p><br>
+          </div>
         </div>
-    </nav>
-
-    <img [src]="task.imageUrl" class="img-fluid img-task" alt="...">
-
-
+        <div class="col">
+          <div class="task-location">
+            <h5 class="location text-primary">
+              <fa-icon class="location-icon text-primary" [icon]="faLocationDot"></fa-icon>{{ task.location }}
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <div class="task-description py-4">
-                    <p>{{task.description}}</p>
-                </div>
-            </div>
+      <div class="row px-3">
+        <div class="col">
+          <div class="task-information">
+            <p class="title"><span class="task-type">Extérieur - </span><span class="task-workToDo">Déblaiement de la
+                neige</span></p>
+            <p class="price">{{ task.price }}</p>
+          </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="task-location">
-                    <p>Lieu: <span>{{task.location}}</span></p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="task-timeToDo">
-                    <p>Temps estimé: <span>{{task.time}}</span></p>
-                </div>
-            </div>
+      </div>
+      <div class="row px-3">
+        <div class="col">
+          <div class="task-timeToDo">
+            <p class="time"><span class="text-time">Durée : </span><span class="data-time">{{task.time}}</span></p>
+          </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="task-price py-5">
-                    <p>{{task.price}}</p>
-                </div>
+      </div>
+      <div class="row px-3">
+        <div class="col">
+          <div class="task-description">
+            <div class="card card-description">
+              <p>{{ task.description }}</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+
+    <button type="button" class="btn btn-light chat-btn">
+      <fa-icon class="msg-icon" [icon]="faPaperPlane"></fa-icon>Chat
+    </button>
+
+  </div>
 </div>

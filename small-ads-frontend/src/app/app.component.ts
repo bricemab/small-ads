@@ -14,7 +14,7 @@ export class AppComponent {
       "id": 123,
       "login": "brice.mabillard",
       "role": "WORKER_USER",
-      "isLoggedIn": true
+      // "isLoggedIn": true
     });
   }
 }

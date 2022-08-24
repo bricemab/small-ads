@@ -1,0 +1,10 @@
+
+// CUSTUM THEME
+$white: #e5e5e5;
+
+$theme-colors: (
+    "primary": #858ae3
+);
+
+@import "../variables";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
