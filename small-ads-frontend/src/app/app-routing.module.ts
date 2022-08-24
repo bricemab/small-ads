@@ -36,11 +36,11 @@ class IsAccessGuard implements CanActivate {
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent, canActivate: [IsAccessGuard], data: {"permissions":Permissions.specialState.userLoggedIn} },
+  { path: 'home', component: HomeComponent, canActivate: [IsAccessGuard], data: {"permissions":Permissions.specialState.allowAll} },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: 'detail/:id', component: TaskDetailComponent, canActivate: [IsAccessGuard], data: {"permissions":Permissions.tasksManager.viewList}},
-  { path: 'register', component: RegisterComponent, canActivate: [IsAccessGuard], data: {"permissions":Permissions.specialState.userLoggedIn} },
-  { path: 'login', component: LoginComponent, canActivate: [IsAccessGuard], data: {"permissions":Permissions.specialState.userLoggedIn} },
+  { path: 'detail/:id', component: TaskDetailComponent, canActivate: [IsAccessGuard], data: {"permissions":Permissions.specialState.allowAll}},
+  { path: 'register', component: RegisterComponent, canActivate: [IsAccessGuard], data: {"permissions":Permissions.specialState.userLoggedOff} },
+  { path: 'login', component: LoginComponent, canActivate: [IsAccessGuard], data: {"permissions":Permissions.specialState.userLoggedOff} },
   { path: '**', component: PageNotFoundComponent },
 
 ];
