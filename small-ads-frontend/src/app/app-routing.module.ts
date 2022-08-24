@@ -15,6 +15,8 @@ import {Observable} from "rxjs";
 import {Permissions} from "./permissions";
 import {LocalStorageService} from "./services/LocalStorage/local-storage.service";
 import AclManager from "./AclManager";
+import { LoginComponent } from './modules/layouts/login/login.component';
+import { RegisterComponent } from './modules/layouts/register/register.component';
 
 @Injectable()
 class IsAccessGuard implements CanActivate {
@@ -37,6 +39,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [IsAccessGuard], data: {"permissions":Permissions.specialState.userLoggedIn} },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: 'detail/:id', component: TaskDetailComponent, canActivate: [IsAccessGuard], data: {"permissions":Permissions.tasksManager.viewList}},
+  { path: 'register', component: RegisterComponent, canActivate: [IsAccessGuard], data: {"permissions":Permissions.specialState.userLoggedIn} },
+  { path: 'login', component: LoginComponent, canActivate: [IsAccessGuard], data: {"permissions":Permissions.specialState.userLoggedIn} },
   { path: '**', component: PageNotFoundComponent },
 
 ];

@@ -10,6 +10,8 @@ import { HomeComponent } from './modules/layouts/home/home.component';
 import { TaskComponent } from './modules/components/task/task.component';
 import { TaskDetailComponent } from './modules/components/task-detail/task-detail.component';
 import { PageNotFoundComponent } from './modules/layouts/page-not-found/page-not-found.component';
+import { LoginComponent } from './modules/layouts/login/login.component';
+import { RegisterComponent } from './modules/layouts/register/register.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { PageNotFoundComponent } from './modules/layouts/page-not-found/page-not
     HomeComponent,
     TaskComponent,
     TaskDetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
