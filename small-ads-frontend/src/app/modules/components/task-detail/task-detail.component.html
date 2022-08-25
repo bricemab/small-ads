@@ -4,21 +4,25 @@
       <a class="backhome-link" routerLink="/home">
         <fa-icon [icon]="faAngleLeft" style="font-size: 25px;"></fa-icon>
       </a>
-      <img [src]="task.imageUrl" class="img-fluid img-task" />
+      <img src="./assets/img/IMG_5907.jpg" class="img-fluid img-task" />
     </div>
 
     <div class="container">
       <div class="row row-clientInfo">
         <div class="col">
           <div class="task-clientInfo px-3">
-            <p class="client-name">Théo Mayoraz</p>
-            <p class="client-date">Client depuis 1 an</p><br>
+            <p class="client-name">
+              {{ task.user.firstname + " " + task.user.lastname }}
+            </p>
+            <p class="client-date">Client depuis 1 an</p>
+            <br />
           </div>
         </div>
         <div class="col">
           <div class="task-location">
             <h5 class="location">
-              <fa-icon class="location-icon" [icon]="faLocationDot"></fa-icon>{{ task.location }}
+              <fa-icon class="location-icon" [icon]="faLocationDot"></fa-icon
+              >{{ task.location }}
             </h5>
           </div>
         </div>
@@ -29,16 +33,21 @@
       <div class="row px-3">
         <div class="col">
           <div class="task-information">
-            <p class="title"><span class="task-type">Extérieur - </span><span class="task-workToDo">Déblaiement de la
-                neige</span></p>
-            <p class="price">{{ task.price }}</p>
+            <p class="title">
+              <span class="task-type">Extérieur - </span
+              ><span class="task-workToDo">Déblaiement de la neige</span>
+            </p>
+            <p class="price">{{ task.price.toFixed(2) }} .-</p>
           </div>
         </div>
       </div>
       <div class="row px-3">
         <div class="col">
           <div class="task-timeToDo">
-            <p class="time"><span class="text-time">Durée : </span><span class="data-time">{{task.time}}</span></p>
+            <p class="time">
+              <span class="text-time">Durée : </span
+              ><span class="data-time">{{ task.time }}</span>
+            </p>
           </div>
         </div>
       </div>
@@ -56,6 +65,5 @@
     <button type="button" class="btn btn-light chat-btn">
       <fa-icon class="msg-icon" [icon]="faPaperPlane"></fa-icon>Chat
     </button>
-
   </div>
 </div>

@@ -1,5 +1,3 @@
-// PERMISSIONS
-// Création des permissions disponible pour le site
 // eslint-disable-next-line import/prefer-default-export
 export const Permissions = {
   specialState: {

@@ -3,7 +3,6 @@ import { ApplicationResponsePromise } from "../../utils/Types";
 import Utils from "../../utils/Utils";
 import { DataBaseUser } from "../Global/DatabaseTypes";
 import { GeneralErrors } from "../Global/BackendErrors";
-import config from "../../config/config";
 
 export default class UsersManager {
   static async findOneByEmail(

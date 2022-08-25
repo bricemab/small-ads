@@ -1,15 +1,14 @@
 import { Request } from "express";
 import {
   AuthenticationErrors,
-  CampaignError,
   GeneralErrors,
+  TaskErrors,
   UserErrors
 } from "../modules/Global/BackendErrors";
-import UserEntity from "../modules/Users/UserEntity";
 import { UserRole } from "../modules/Users/UserRoles";
 
 export interface ApplicationError {
-  code: GeneralErrors | AuthenticationErrors | UserErrors | CampaignError;
+  code: GeneralErrors | AuthenticationErrors | UserErrors | TaskErrors;
   message: string;
   details?: any;
 }

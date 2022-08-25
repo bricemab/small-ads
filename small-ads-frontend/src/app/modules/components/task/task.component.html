@@ -1,32 +1,37 @@
 <div class="row row-cols-1 row-cols-sm-1 g-3">
-  <div class="col" *ngFor="let task of tasks">
-    <div class="card sm-3" style="max-width: 540px; ">
-      <div class="row">
-        <div class="col">
-          <img
-            [src]="task.imageUrl"
-            class="img-fluid rounded-start image"
-            alt="..."
-          />
-        </div>
-        <div class="col">
-          <div class="information-block">
-            <h5 class="location">
-              <fa-icon class="location-icon" [icon]="faLocationDot"></fa-icon
-              >{{ task.location }}
-            </h5>
-            <p class="description">
-              {{
-                task.description.length > 6
-                  ? (task.description | slice: 0:40) + ".."
-                  : task.description
-              }}
-            </p>
+  <ng-container *ngIf="tasks.length > 0">
+    <div class="col" *ngFor="let task of tasks">
+      <div class="card sm-3" style="max-width: 540px; ">
+        <div class="row">
+          <div class="col">
+            <img
+              src="./assets/img/IMG_5907.jpg"
+              class="img-fluid rounded-start image"
+              alt="..."
+            />
           </div>
-          <p class="price">{{ task.price }}</p>
-          <a routerLink="/detail/{{ task.id }}" class="stretched-link"></a>
+          <div class="col">
+            <div class="information-block">
+              <h5 class="location">
+                <fa-icon class="location-icon" [icon]="faLocationDot"></fa-icon>
+                {{ task.location }}
+              </h5>
+              <p class="description">
+                {{
+                  task.description.length > 6
+                    ? (task.description | slice: 0:40) + ".."
+                    : task.description
+                }}
+              </p>
+            </div>
+            <p class="price">CHF {{ task.price }} .-</p>
+            <a routerLink="/detail/{{ task.id }}" class="stretched-link"></a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
+  <ng-container *ngIf="tasks.length === 0">
+    <div>Aucune tâche trouvée</div>
+  </ng-container>
 </div>

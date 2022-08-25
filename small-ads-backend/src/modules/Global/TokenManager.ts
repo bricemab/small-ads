@@ -28,15 +28,12 @@ export default class TokenManager {
     const rawToken = request.headers["x-user-token"] as string;
     const backendToken = request.headers["x-access-token"] as string;
 
-    //Verification du token d'accès au backend
     if (
       backendToken &&
       config.server.security.backendTokenSecretKey === backendToken
     ) {
-      //Vérification si les data sont authentiques
-      if (Utils.validateHmacSha256Signature(token, data) || true) {
+      if (Utils.validateHmacSha256Signature(token, data)) {
         if (rawToken) {
-          // Décode du token de connexion
           TokenManager.decodeToken(rawToken)
             .then((tokenData: ApplicationUserSessionToken) => {
               request.rawToken = rawToken;
@@ -78,13 +75,6 @@ export default class TokenManager {
       });
     }
   }
-
-  /*
-   * Fonction qui retourne une promise avec le token décodé
-   *
-   * Parameter: token string
-   * Return: Promise<ApplicationUserSessionToken>
-   */
 
   // eslint-disable-next-line no-shadow
   static decodeToken(token: string): Promise<ApplicationUserSessionToken> {

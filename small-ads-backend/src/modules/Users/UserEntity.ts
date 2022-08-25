@@ -14,6 +14,8 @@ export default class UserEntity extends MysqlAbstractEntity<boolean> {
   public lastname: string;
   public password: string;
   public role: UserRole;
+  public registerDate: Moment;
+  public lastModificationDate: Moment;
   public archived: boolean;
 
   constructor(
@@ -23,6 +25,8 @@ export default class UserEntity extends MysqlAbstractEntity<boolean> {
     lastname: string,
     password: string,
     role: UserRole,
+    registerDate: Moment,
+    lastModificationDate: Moment,
     archived: boolean
   ) {
     super();
@@ -116,6 +120,8 @@ export default class UserEntity extends MysqlAbstractEntity<boolean> {
       databaseObject.lastname,
       databaseObject.password,
       databaseObject.role,
+      moment(databaseObject.register_date),
+      moment(databaseObject.last_modification_date),
       databaseObject.archived
     );
     user.existsInDataBase = true;
@@ -130,6 +136,8 @@ export default class UserEntity extends MysqlAbstractEntity<boolean> {
       lastname: this.lastname,
       firstname: this.firstname,
       role: this.role,
+      registerDate: this.registerDate,
+      lastModificationDate: this.lastModificationDate,
       archived: this.archived
     };
   }

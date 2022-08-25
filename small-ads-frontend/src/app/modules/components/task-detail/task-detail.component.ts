@@ -3,7 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { TaskService } from '../../../services/Task/task.service';
 import { Task } from '../../../types/Task';
-import { faAngleLeft, faPaperPlane, faLocationDot} from '@fortawesome/free-solid-svg-icons';
+import {
+  faAngleLeft,
+  faPaperPlane,
+  faLocationDot
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-task-detail',
@@ -21,11 +25,13 @@ export class TaskDetailComponent implements OnInit {
     private location: Location
   ) {}
 
-  ngOnInit(): void {
-    this.getTask();
+  async ngOnInit(): Promise<void> {
+    await this.getTask();
+    console.log(this.task);
   }
-  getTask(): void {
+  async getTask(): Promise<void> {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.taskService.getTask(id).subscribe(task => (this.task = task));
+    const t = await this.taskService.getTask(id);
+    t.subscribe(task => (this.task = task));
   }
 }
