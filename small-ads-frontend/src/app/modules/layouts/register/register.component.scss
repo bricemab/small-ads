@@ -1,3 +1,126 @@
+@import '../../../../styles/styles.scss';
+$font-primary: "Open Sans";
+$font-primary-bold: "Open Sans Bold";
+
 * {
-    color: white;
+    font-family: $font-primary;
+    color: $white;
+}
+
+.login-section {
+    padding: 2em 0;
+}
+
+.wrap {
+    width: 100%;
+    background-color: #282c31;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px 0px, rgba(0, 0, 0, 0.22) 0px 10px 10px 0px;
+
+    @include media-breakpoint-up(md) {
+        position: relative;
+        left: 25%;
+        width: 50%;
+    }
+}
+
+.login-wrap {
+    width: 100%;
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+}
+
+h2 {
+    font-family: $font-primary-bold;
+    color: $white;
+}
+
+.form-group {
+    position: relative;
+
+    .label {
+        font-family: $font-primary-bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #e5e5e5;
+        padding-bottom: 1rem;
+    }
+
+}
+
+.input {
+    height: 48px;
+    background: rgba(14, 14, 14, 0.05);
+    font-size: 16px;
+    border-radius: 50px;
+    box-shadow: none;
+    border: 1px solid transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: $white;
+
+
+    &:focus,
+    &:active {
+        outline: none !important;
+        box-shadow: none;
+        background: rgba(0, 0, 0, .07);
+        border-color: transparent;
+        color: $white;
+    }
+}
+
+.submit {
+    height: 48px;
+    font-size: 16px;
+    border-radius: 50px;
+    box-shadow: none;
+    border: 1px solid transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: $white;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.text-signup {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.section-signup {
+    font-size: 14px;
+}
+
+.arrow-icon{
+    margin-left: 0.5rem;
+}
+
+.arrow-icon{
+    margin-left: 0.5rem;
+}
+
+.block-signup .arrow-icon {
+    position: relative;
+    left: 0;
+    transition: ease-in-out 0.2s;
+}
+
+.block-signup:hover .arrow-icon {
+    left: 1rem;
+    color: $white;
+}
+
+.label-name {
+    position: relative;
+    left: 37%;
 }

@@ -1,1 +1,62 @@
-<p>register works!</p>
+<section class="login-section">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-5 col-lg-5">
+                <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+                    <div class="text w-100">
+                        <h2>Logo</h2>
+                    </div>
+                </div>
+                <div class="wrap d-flex">
+
+                    <div class="login-wrap p-4 p-lg-5">
+    
+                        <form action="#" class="signin-form">
+                            <div class="form-group">
+                                <label class="label" for="password">First name</label>
+                                <span class="separation"></span>
+                                <label class="label label-name" for="password">Name</label>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control input" aria-label="FirstName">
+                                <span></span>
+                                <input type="text" class="form-control input" aria-label="Name">
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label class="label" for="name">Email</label>
+                                <input type="email" class="form-control input" required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label class="label" for="name">Username</label>
+                                <input type="text" class="form-control input" required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label class="label" for="password">Password</label>
+                                <input type="password" class="form-control input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary submit px-3 ">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+                    <div class="section-signup w-100">
+                        <p>You have an account ?</p>
+                        <div class="block-signup">
+                            <a routerLink="/login" class="text-signup">Sign In<fa-icon class="arrow-icon"
+                                    [icon]="faArrowRightLong"></fa-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
