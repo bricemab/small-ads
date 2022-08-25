@@ -1,8 +1,7 @@
-import { Task } from '../../types/Task';
 const loremIpsum =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque imperdiet posuere. Aenean at urna lacinia dolor auctor dignissim id vitae ipsum.';
 
-export const TASKS: Task[] = [
+export const TASKS = [
   {
     id: 1,
     name: 'Baby-sittings',

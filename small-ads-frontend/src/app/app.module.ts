@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AlertModule } from './services/Alert';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './modules/layouts/navbar/navbar.component';
@@ -13,6 +14,7 @@ import { PageNotFoundComponent } from './modules/layouts/page-not-found/page-not
 import { LoginComponent } from './modules/layouts/login/login.component';
 import { RegisterComponent } from './modules/layouts/register/register.component';
 
+import { AlertComponent } from './modules/components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +25,12 @@ import { RegisterComponent } from './modules/layouts/register/register.component
     TaskDetailComponent,
     PageNotFoundComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PageNotFoundComponent,
+    AlertComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, AlertModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

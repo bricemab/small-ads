@@ -1,7 +1,6 @@
 /* eslint-disable camelcase */
-import { CampaignStatus } from "../Campaigns/CampaignStatus";
-import { CampaignLogAction } from "../CampaignLogs/CampaignLogAction";
 import { UserRole } from "../Users/UserRoles";
+import { TaskStatus } from "../Tasks/TaskStatus";
 
 export interface DataBaseUser {
   id: number;
@@ -10,5 +9,21 @@ export interface DataBaseUser {
   lastname: string;
   password: string;
   role: UserRole;
+  register_date: Date;
+  last_modification_date: Date;
+  archived: boolean;
+}
+export interface DataBaseTask {
+  id: number;
+  title: string;
+  description: string;
+  status: TaskStatus;
+  price: number;
+  time: string;
+  location: string;
+  image_id: number;
+  user_id: number;
+  creation_date: Date;
+  last_modification_date: Date;
   archived: boolean;
 }
