@@ -1,0 +1,50 @@
+@import '../../../../styles/styles.scss';
+
+* {
+    color: $white;
+}
+
+.main-title {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 25px;
+    font-family: "Open Sans Bold";
+}
+
+.section-message {
+    border-radius: 0px;
+}
+
+.list-group{
+    border-color: transparent !important;
+}
+
+.list-group-item:last-child {
+    border: 0;
+    border-bottom: 1px solid #394148;
+}
+
+.message-item {
+    background-color: transparent;
+}
+
+.username-message {
+    font-family: "Open Sans Bold";
+    font-size: 14px;
+    margin-left: 1rem;
+}
+
+.content-message {
+    font-size: 13px;
+    color: #adadad;
+    margin-left: 1rem;
+}
+
+.date-message {
+    position: absolute;
+    right: 0;
+    left: 85%;
+    top: 35%;
+    font-size: 13px;
+    color: #adadad;
+}
